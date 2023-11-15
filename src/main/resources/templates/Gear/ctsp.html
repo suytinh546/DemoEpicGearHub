@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6895c8023a.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid p-0">
+      <div class="col ">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0">
+            <div class="container-fluid" style="background-color: #333333;" data-bs-theme="dark">
+              <a href="index.html"><img class="mt-2" src="img/EpicGearHub.png" width="290px" alt=""></a>
+              <div class="collapse navbar-collapse " style="display: flex;" id="navbarSupportedContent">
+                <form class="d-flex" role="search" style= " margin-left: 110px; width: 600px; height: 50px;" >
+                  <input class="form-control me-2" type="search" style="background-color: white; color: black;" placeholder="Tìm kiếm sản phẩm" aria-label="Search">
+                </form>
+            </div>
+            <div style="font-size: 25px; float: right; padding-right: 10px;">
+                    <a href="gh.html" style="color: white;"><i class="fa-solid fa-cart-shopping me-3"></i></a>
+                    <a href="ac.html" style="color: white;"><i class="fa-regular fa-user"></i></a>
+            </div>
+            </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary p-0 " >
+                <div class="container-fluid " style="background-color: gray; ">
+                  <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" style="color: white;" href="sanpham.html">Máy Tính</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link font-monospace" style="color: white;" href="#">Laptop</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link font-monospace" style="color: white;" href="#">Tai Nghe</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link font-monospace" style="color: white;" href="#">Bàn Phím</a>
+                      </li>
+                      <li class="nav-item dropdown">
+         				 <a class="nav-link dropdown-toggle"  style="color: white;"href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           					 Linh Kiện
+          				 </a>
+          					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            					<li><a class="dropdown-item" href="#">CPU</a></li>
+            					<li><a class="dropdown-item" href="#">VGA</a></li>
+            					<li><a class="dropdown-item" href="#">Mainboard</a></li>
+            					<li><a class="dropdown-item" href="#">RAM</a></li>
+            					<li><a class="dropdown-item" href="#">ROM</a></li>
+            					<li><a class="dropdown-item" href="#">PSU</a></li>
+            					<li><a class="dropdown-item" href="#">Case</a></li>
+          					</ul>
+        			 </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+          </div>
+
+
+          <!--  sản phẩm -->
+        <div class="container mt-5">
+			<a class="dropdown-item" href="#">CPU</a>
+            					<a class="dropdown-item" href="/Gear/index?cid=VGA">VGA</a>
+            					<a class="dropdown-item" href="#">Mainboard</a>
+            					<a class="dropdown-item" href="#">RAM</a>
+            					<a class="dropdown-item" href="#">ROM</a>
+            					<a class="dropdown-item" href="#">PSU</a>
+            					<a class="dropdown-item" href="#">Case</a>
+            <div class="row">
+              <div class="col me-3">
+                <img class="img-fluid" th:src="@{|/assets/imgproduct/${item.image}|}" width="650px" height="500px" alt="">
+              </div>
+              <div class="col leftbr">
+                <h2>[[${item.name}]]</h2>
+                <h2>[[${item.price}]]</h2>
+                <br>
+                <table class="table" >
+                  <thead>
+                    <tr>
+                      <th scope="col">Số Lượng</th>
+                      <th scope="col">Giá</th>
+                      <th scope="col">Tổng Tiền</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> <input style="border: 1px solid white;" type="number" value="1"></td>
+                      <td>......</td>
+                      <td>......</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button type="button" class="btn btn-secondary btt mt-3"  style=" display: flex; float: right; width: 210px; height: 45px; font-size: 20px;">Thêm Vào Giỏ Hàng</button>
+              </div>
+              <hr class="mt-3 mb-3">
+            </div>
+            <div class="row">
+              <div class="col">
+                <h2>Thông tin sản phẩm: </h2>
+                <p>A thousand years before Aloy discovered hers, the Focus was the must-have device for anyone in the 2060s. 
+                  This ear cuff features a stylish, sterling silver silver plated artisan brass and cubic zirconia crystal 
+                  recreation of Aloy’s iconic device.</p>
+                  <ul>
+                    <li>Size: 26mm w x 25mm h (not including adjustable wire cuff)</li>
+                    <li>Material: silver plated brass, cubic zirconia crystal </li>
+                    <li>Box: Horizon x RockLove branded packaging</li>
+                  </ul>
+                  <br>
+                  <i>Please note that this item is available for preorder and is expected to ship in November 2023, though 
+                    shipment dates are subject to change.</i>
+
+              </div>
+            </div>
+
+        </div>
+            
+
+
+
+
+
+
+
+            <div class="w-100 mb-5"></div>
+      
+      
+      <footer>
+        <div class="container-fluid" >
+          <div class="row" style="background-color: #333333;">
+            <div class="col hop">
+              <a href=""><img src="/img/tw-removebg-preview.png" width="20px" alt=""></a>
+              <a href=""><img src="/img/dc-removebg-preview.png" width="50px" alt="" ></a>
+              <a href=""><img src="/img/fb.png" width="20px" alt=""></a>
+            </div>
+            <div>
+               <p style="color: white; font-size: 13px;" class="mt-3 ms-5">
+                Copyright 2023 Bensussen Deutsch & Associates, LLC. All rights reserved. Use of this site is subject to the BDA Terms of Use.
+                <br>
+                This site is operated by BDA, LLC. All logos, trademarks and brands are property of their respective owners.
+               </p>
+               <p style="color: white; font-size: 13px;" class="mt-3 ms-5">
+                © 2023 Sony Interactive Entertainment Inc. "", "", "", "" 
+                and "DualSense" are registered trademarks or trademarks of Sony Interactive Entertainment Inc.
+               </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      
+   </div>
+
+
+
+    
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

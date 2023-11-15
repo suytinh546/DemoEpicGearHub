@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div th:each="p:${items}">
+		<div th:text="${p.name}"></div>
+        <div class="col-md-4 mb-4">
+            <div class="card product-card">
+              <img src="hinh_anh_san_pham.jpg" class="card-img-top" alt="Tên sản phẩm">
+              <div class="card-body">
+                <h5 class="card-title">Tên sản phẩm</h5>
+                <p class="card-text">Giá: $99.99</p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-primary btn-add-to-cart">Thêm vào giỏ hàng</button>
+              </div>
+            </div>
+          </div>          
+	</div>
+</body>
+</html>

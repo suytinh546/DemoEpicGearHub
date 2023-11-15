@@ -1,0 +1,63 @@
+.nav-link{
+    font-size: 20px;
+    margin-left: 25px;
+}
+.hop{
+    border: 2px solid white;
+    display: flex;
+    justify-content: right;
+}
+.br{
+    border: 2px solid white;
+}
+.li{
+    list-style: none;
+}
+.vien{
+    border: 1px sloid ;
+    border-radius: 3px;
+    background-color: lightgray;
+    height: 60px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.leftbr{
+    border-left: 1px solid black;
+}
+.brtb{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+.bgg{
+    background-color: gainsboro;
+    border: 1px solid gainsboro;
+}
+.dn{
+    background-color: gray;
+    height: 50px;
+}
+.btt:hover{
+    background-color: #194296;
+    color: white;
+    border: 1px solid #194296;
+}
+.xoa{
+    width: 150px;
+    height: 40px;
+    position: relative;
+    right: 115px;
+    top: 100px;
+}
+.khung{
+    width: 200px;
+    width: 500px;
+}
+label{
+    font-size: 20px;
+}
+.khung1{
+    width: 400px;
+    width: 500px;
+}
